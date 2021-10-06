@@ -1,0 +1,39 @@
+
+.TopContainer
+{
+    width: 100%;
+    margin-bottom: auto;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.TopNotificantion, .TopUser
+{
+    width: 48px;
+    height: 48px;
+    margin: 0px 2px 0 4px;
+    float: left;
+    display: table-cell;
+}
+
+.TopNotificantion
+{
+    background-color: #0f338c;
+}
+
+.TopUserBottomBar
+{
+    width: inherit;
+    height: 10%;
+    background-color: #0f338c;
+    position: absolute;
+    bottom: 0;
+}
+
+Img
+{
+    width: inherit;
+    height: inherit;
+    float: left;
+}
