@@ -2,24 +2,26 @@
 .TopContainer
 {
     width: 100%;
-    margin-bottom: auto;
+    margin: auto;
     overflow: hidden;
     display: flex;
     position: relative;
 }
 
-.TopNotificantion, .TopUser
+.FloatBox
 {
     width: 48px;
     height: 48px;
     margin: 0px 2px 0 4px;
     float: left;
     display: table-cell;
+    margin-top: 2.5%;
 }
 
-.TopNotificantion
+.TopNotification
 {
     background-color: #0f338c;
+    margin-left: 5%;
 }
 
 .TopUserBottomBar
@@ -31,9 +33,26 @@
     bottom: 0;
 }
 
+.NotificationCount
+{
+    background-color: #0f338c;
+    width: 45%;
+    height: 45%;
+    z-index: 2;
+    position: relative;
+
+}
+
+.XboxLogo
+{
+    float: right;
+    margin-right: 5%;
+}
+
 Img
 {
     width: inherit;
     height: inherit;
     float: left;
+    z-index: 1;
 }
