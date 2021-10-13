@@ -1,0 +1,29 @@
+
+<div class="Container">
+
+    <app-top></app-top>
+
+    <nav>
+        <a href="#">Pins</a>
+        <a href="#">Home</a>
+        <a href="#">Store</a>
+    </nav>
+
+    <div class="ScrollContainer">
+        <div class="PinsContainer">
+            <div *ngFor="let app of AppService.Apps" class="Tile-sm">
+                <div *ngIf="app.BackgroundColor">
+                   <div [style.background-color]="app.BackgroundColor" class="Tile-sm">
+                        <img src="{{ app.IconUrl  }}" class="TileImg-sm"/>                     
+                        <p>{{ app.Name }}</p>
+                    </div>
+                </div>
+                <div *ngIf="app.BackgroundImgUrl">
+                    <div class="Tile-sm">
+                         <img src="{{ app.BackgroundImgUrl  }}" class="TileImg-Normal"/>                     
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>

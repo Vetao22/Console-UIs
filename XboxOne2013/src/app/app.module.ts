@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopComponent } from 'src/View/Start/Top/top/top.component';
+import { StartMainContentComponent } from './src/View/start-main-content/start-main-content.component';
+import { TopComponent } from './src/View/Start/Top/top/top.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopComponent
+    TopComponent,
+    StartMainContentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,15 @@
 
 export class XboxAppTile
 {
-    Name: string;
+    Name?: string;
     IconUrl?: string;
     BackgroundImgUrl?: string;
 
     //Hexadecimal color
     BackgroundColor?: string;
 
-    constructor(name: string)
+    constructor()
     {
-        this.Name = name;
+    
     }
 }

@@ -20,8 +20,39 @@
 
 .TopNotification
 {
+    min-width: 48px;
     background-color: #0f338c;
     margin-left: 5%;
+    position: relative;
+}
+
+.NotificationCount
+{
+    background-color: #0f338c;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+.NotificationCount p
+{
+    color: white;    
+    display: table-cell;
+    position: absolute;
+    left: 30%;
+    top: -50%;
+}
+
+.TopNotificationImg
+{
+    width: 70%;
+    height: 60%;
+    position: absolute;
+    top: 18%;
+    left: 15%;
 }
 
 .TopUserBottomBar
@@ -31,16 +62,7 @@
     background-color: #0f338c;
     position: absolute;
     bottom: 0;
-}
-
-.NotificationCount
-{
-    background-color: #0f338c;
-    width: 45%;
-    height: 45%;
     z-index: 2;
-    position: relative;
-
 }
 
 .XboxLogo
@@ -54,5 +76,6 @@ Img
     width: inherit;
     height: inherit;
     float: left;
+    position: relative;
     z-index: 1;
 }
