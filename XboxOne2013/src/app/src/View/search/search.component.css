@@ -1,0 +1,258 @@
+.container
+{
+    background-image: url("../../../../assets/Search-Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.overlay
+{
+    float: left;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle closest-corner, rgba(255,255,255, .2) 0%, rgba(0,0,0,1) 60%);
+    z-index: 1;
+}
+
+.KeyboardContainer
+{
+    width: 80%;
+    height: 60%;
+    z-index: 2;
+}
+
+.InputBox
+{
+    border: solid white 2px;
+    padding: 2px;
+    height: 70px;
+    position: relative;
+    top: 60%;
+    left: 15%;
+    z-index: 2;
+}
+
+.InputBox > input
+{
+    width: 99%;
+    height: 90%;
+    display: inline;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: black;
+    padding-left: 5px;
+}
+
+.StoreSearchBarPoweredText
+{
+    text-align: start;
+    margin-top: 15px;
+    margin-right: 4px;
+}
+
+.StoreSearchBarPoweredText > p
+{
+    display: inline;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
+    font-weight: 600;
+    color: white;
+    opacity: 0.5;
+}
+
+.StoreSearchBarBingText
+{
+    opacity: 1;
+}
+
+.SearchStoreBingLogo
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 3px;
+}
+
+.FloatBox
+{
+    width: 48px;
+    height: 48px;
+    margin: 0px 2px 0 4px;
+    float: left;
+    display: table-cell;
+    margin-top: 2.5%;
+    z-index: 2;
+}
+
+.Keyboard
+{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    top: 75%;
+    left: 15%;
+    z-index: 2;
+    background-color: black;
+}
+
+.KeyboardHorizontalGrid
+{
+    display: grid;
+    grid-template-columns: 11% 84% 11%;
+    height: 85%;
+    width: 80%;
+    margin: auto;
+}
+
+.KeyboardLeftContainer
+{
+    grid-column: 1;
+    width: fit-content;
+}
+
+.KeyboardRightContainer
+{
+    grid-column: 3;
+    width: fit-content;
+    text-align: end;
+    position: relative;
+    left: -13px;
+}
+
+.KeyboardMainSessionGrid
+{
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-column: 2;
+    width: 100%;
+    margin: 0 3px 0 3px;
+    
+}
+
+.KeyboardMainSessionFlexContainer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-row: 1;
+    row-gap: 0px;
+}
+
+.KeyboardMainSessionBottomContainer
+{
+    grid-row: 2;
+    height: 100%;
+}
+
+.Key
+{
+    margin: 3px;
+    border: none;
+    border-radius: 2px;
+    word-break: break-all;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255,255,255,.7);   
+}
+
+.Key:hover
+{
+    border: solid 2px white;
+}
+
+.KeySmall
+{
+    height: 21%;
+    width: 9%;
+    background-color: #383838;
+}
+
+.KeyLarge
+{
+    height: 57%;
+    width: 100%;
+    background-color:#151515;    
+}
+
+.KeyLarge > img
+{
+    width: 30%;
+    height: 15%;
+}
+
+.KeySquare
+{
+    width: 100%;
+    height: 32%;
+    background-color:#151515;    
+}
+
+.KeySquare > img
+{
+    width: 30%;
+    height: 30%;
+}
+
+.KeyWide
+{
+    height: 54%;
+    width: 18.7%;
+    background-color:#151515;   
+}
+
+.KeyExtraWide
+{
+    height: 54%;
+    width: 58.2%;
+    background-color:#151515;   
+}
+
+.KeyWide > div, .KeyExtraWide > div
+{
+    margin: auto;
+    height: 20px;   
+}
+
+.BottomKeyText
+{
+    margin: auto;
+    width: auto;
+    position: relative;
+    top: -6px;
+    left: 6px;
+}
+
+.BottomKeyImg
+{
+    width: 22px;
+    height: 22px;
+    position: relative;
+    float: right;
+    top: 6px;
+    right: 6px;
+    
+}
+
+.XboxLogo
+{
+    float: right;
+    margin-right: 5%;
+    z-index: 2;
+}
+
+.XboxLogo > Img
+{
+    width: inherit;
+    height: inherit;
+    float: left;
+    position: relative;
+    z-index: 2;
+}

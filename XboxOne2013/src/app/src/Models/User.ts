@@ -1,3 +1,4 @@
+import { XboxAppService } from "../Services/XboxAppService";
 import { XboxAppTile } from "./XboxAppTIle";
 
 export class User
@@ -25,5 +26,55 @@ export class User
         this.Friends = new Array<User>();
         this.Followers = new Array<User>();
         this.Pins = new Array<XboxAppTile>();
+    }
+
+    AddPin(xboxApp: XboxAppTile | null)
+    {
+        if(xboxApp)
+        {
+            this.Pins.push(xboxApp);
+        }
+    }
+
+    AddPinByName(xboxAppName: string)
+    {
+        let xboxAppService = new XboxAppService();
+        let xboxApp = xboxAppService.Search(xboxAppName);
+
+        if(xboxApp)
+        {
+            this.Pins.push(xboxApp);
+        }
+    }
+
+    AddFriend(friend: User | null)
+    {
+        if(friend)
+        {
+            this.Friends.push(friend);
+        }
+    }
+
+    AddFollower(follower: User | null)
+    {
+        if(follower)
+        {
+            this.Followers.push(follower);
+        }
+    }
+
+    SetGamerscore(gamerscore: string)
+    {
+        if(gamerscore && !isNaN(Number(gamerscore)))
+        {
+            this.Gamerscore = gamerscore;
+        }
+    }
+
+    GetOnlineFriendsCount(): string
+    {
+        let onlineFriends = this.Friends.filter(f => f.Online).length;
+
+        return onlineFriends.toString();
     }
 }

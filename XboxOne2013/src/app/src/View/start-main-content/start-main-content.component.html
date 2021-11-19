@@ -4,25 +4,170 @@
     <app-top></app-top>
 
     <nav>
-        <a href="#">Pins</a>
-        <a href="#">Home</a>
-        <a href="#">Store</a>
+        <a href=".PinsCotainer" (click)="ScrollToContainer($event, 'PinsContainer')">Pins</a>
+        <a href=".HomeContainer" (click)="ScrollToContainer($event, 'HomeContainer')">Home</a>
+        <a href=".StoreContainer" (click)="ScrollToContainer($event, 'NewOnXboxContainer')">Store</a>
     </nav>
 
-    <div class="ScrollContainer">
+    <div class="ScrollContainer" #scrollContainer (wheel)="Scroll($event)">
         <div class="PinsContainer">
-            <div *ngFor="let app of AppService.Apps" class="Tile-sm">
+            <div *ngFor="let app of UsersService.LoggedUser.Pins" class="Tile-sm">
                 <div *ngIf="app.BackgroundColor">
-                   <div [style.background-color]="app.BackgroundColor" class="Tile-sm">
+                   <div [style.background-color]="app.BackgroundColor" class="Tile-sm SelectedTile">
                         <img src="{{ app.IconUrl  }}" class="TileImg-sm"/>                     
                         <p>{{ app.Name }}</p>
                     </div>
                 </div>
                 <div *ngIf="app.BackgroundImgUrl">
                     <div class="Tile-sm">
-                         <img src="{{ app.BackgroundImgUrl  }}" class="TileImg-Normal"/>                     
+                         <img src="{{ app.BackgroundImgUrl  }}" class="TileImg-Normal SelectedTile"/>                     
                      </div>
                  </div>
+            </div>
+        </div>
+
+        <div class="HomeContainer">
+            <div class="HomeUser SelectedTile">
+                <img src="{{ UsersService.LoggedUser.ProfilePicUrl }}" class="HomeUserProfilePic">
+                <p>{{ UsersService.LoggedUser.Name }}</p>
+                <p>{{ UsersService.LoggedUser.Surname }}</p>
+                <div class="HomeGamerscoreContainer">
+                    <img src="../../assets/GamerscoreLogo.png">
+                    <p>{{ UsersService.LoggedUser.Gamerscore }}</p>
+                </div>
+                <div class="MailContainer">
+                    <img src="../../assets/MailLogo.png">
+                    <p>{{ UsersService.LoggedUser.Messages }}</p>
+                </div>
+                <div class="OnlineFriendsContainer">
+                    <p>{{ UsersService.LoggedUser.GetOnlineFriendsCount() }}</p>
+                    <p>friends online</p>
+                </div>
+            </div>
+
+            <div class="ActiveGameContainer">
+                <img src="../../assets/ForzaMotorsport5.jpg" class="SelectedTile">
+                <p>Forza Motorsport 5</p>
+            </div>
+
+            <div class="HomeTile-sm SelectedTile" 
+                [style.background-color]="AppService.Search('Snap')?.BackgroundColor"
+                style="grid-column: 6; grid-row: 1; margin-left: 22px; margin-top: 7px;">
+                <img src="{{ AppService.Search('Snap')?.IconUrl }}">     
+                <p>{{ AppService.Search('Snap')?.Name }}</p>                
+            </div>
+
+             <div class="HomeTile-sm SelectedTile" 
+                [style.background-color]="AppService.Search('My Games')?.BackgroundColor"
+                style="grid-column: 6; grid-row: 2; margin-left: 22px; margin-top: -4px;
+                 height: 86%;">
+                <img src="{{ AppService.Search('My Games')?.IconUrl }}">     
+                <p>{{ AppService.Search('My Games')?.Name }}</p>                
+            </div>
+
+            <div class="HomeTile-sm SelectedTile" 
+                [style.background-color]="AppService.Search('Internet Explorer')?.BackgroundColor"
+                style="grid-column-start: 2; grid-column-end: 2; grid-row-start: 3; grid-row-end: 3;
+                    margin-top: -20px; margin-left: 2px;">
+                <img src="{{ AppService.Search('Internet Explorer')?.IconUrl }}">     
+                <p>{{ AppService.Search('Internet Explorer')?.Name }}</p>                
+            </div>
+
+            <div class="HomeTile-sm SelectedTile" 
+                [style.background-color]="AppService.Search('TV')?.BackgroundColor"
+                style="grid-column-start: 3; grid-column-end: 3; grid-row-start: 3; grid-row-end: 3;
+                    margin-top: -20px; margin-left: 7px;">
+                <img src="{{ AppService.Search('TV')?.IconUrl }}">     
+                <p>{{ AppService.Search('TV')?.Name }}</p>                
+            </div>
+
+            <div class="HomeTile-sm SelectedTile" 
+                [style.background-color]="AppService.Search('Skydrive')?.BackgroundColor"
+                style="grid-column-start: 3; grid-column-end: 3; grid-row-start: 3; grid-row-end: 3;
+                    margin-top: -20px; margin-left: 147px;">
+                <img src="{{ AppService.Search('Skydrive')?.IconUrl }}">     
+                <p>{{ AppService.Search('Skydrive')?.Name }}</p>                
+            </div>
+
+            <div class="HomeTile-sm SelectedTile" 
+                [style.background-color]="AppService.Search('Nfl')?.BackgroundColor"
+                style="grid-column-start: 3; grid-column-end: 3; grid-row-start: 3; grid-row-end: 3;
+                    margin-top: -20px; margin-left: 287px;">
+                <img src="{{ AppService.Search('Nfl')?.IconUrl }}">     
+                <p>{{ AppService.Search('Nfl')?.Name }}</p>                
+            </div>
+
+            <div class="HomeTile-sm SelectedTile" 
+                [style.background-color]="AppService.Search('Insert Disc')?.BackgroundColor"
+                style="grid-column-start: 4; grid-column-end: 4; grid-row-start: 3; grid-row-end: 3;
+                    margin-top: -20px; margin-left: 292px;">
+                <img src="{{ AppService.Search('Insert Disc')?.IconUrl }}">     
+                <p>{{ AppService.Search('Insert Disc')?.Name }}</p>                
+            </div>          
+        </div>
+
+        <div class="NewOnXboxContainer">
+            <p>WHAT'S NEW ON XBOX ONE</p>
+            
+            <div>
+                <div class="NewOnXboxTile SelectedTile">
+                    <img src="../../assets/XboxOne.png" class="TileImg-Normal"/>       
+                    <p>Let us show you around</p>              
+                </div>
+
+                <div class="NewOnXboxTile SelectedTile">
+                    <img src="../../assets/StarTrek.jpg" class="TileImg-Normal"/>
+                    <p>Star Trek: Into The Darkness</p>                       
+                </div>
+
+                <div class="NewOnXboxTile SelectedTile">
+                    <img src="../../assets/KillerInstinctJago.jpeg" class="TileImg-Normal"/>        
+                    <p>Play Killer Instinct Multiplayer</p>                      
+                </div>
+            </div>
+        </div>
+
+        <div class="StoreContainer">
+            <div class="StoreItem SelectedTile" style="grid-row: 1; grid-column: 1;">
+                <img src="../../assets/Messi.jpg">
+                <p>Games</p>
+            </div>
+            <div class="StoreItem SelectedTile" style="grid-row: 1; grid-column: 2;">
+                <img src="../../assets/Superman.png">
+                <p>Movies</p>
+            </div>
+            <div class="StoreItem SelectedTile" style="grid-row: 1; grid-column: 3;">
+                <img src="../../assets/Pitbull.png">
+                <p>Music</p>
+            </div>
+            <div class="StoreItem SelectedTile" style="grid-row: 1; grid-column: 4; background-color: #fe561b;">
+                <div class="StoreItemAppsContainer">
+                    <div [style.background-color]="AppService.Search('Netflix')?.BackgroundColor" class="StoreItemTile">
+                        <img src="{{ AppService.Search('Netflix')?.IconUrl }}" class="TileImg-sm"/>                     
+                    </div>
+                    <div [style.background-color]="AppService.Search('TV')?.BackgroundColor" class="StoreItemTile">
+                        <img src="{{ AppService.Search('Netflix')?.IconUrl }}" class="TileImg-sm"/>                     
+                    </div>
+                    <div [style.background-color]="AppService.Search('Skydrive')?.BackgroundColor" class="StoreItemTile">
+                        <img src="{{ AppService.Search('Skydrive')?.IconUrl }}" class="TileImg-sm"/>                     
+                    </div>
+                    <div [style.background-color]="AppService.Search('Skype')?.BackgroundColor" class="StoreItemTile">
+                        <img src="{{ AppService.Search('Skype')?.IconUrl }}" class="TileImg-sm"/>                     
+                    </div>
+                </div>
+                <p>Apps</p>
+            </div>
+            <div class="StoreSearchBar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+
+                <input type="text" placeholder="Search on Xbox Store" readonly class="SelectedTile">
+
+                <div class="StoreSearchBarPoweredText">
+                    <p>Powered by <img src="../../assets/BingLogo.svg" class="SearchStoreBingLogo"></p>                    
+                    <p class="StoreSearchBarBingText">bing</p>
+                </div>
             </div>
         </div>
     </div>

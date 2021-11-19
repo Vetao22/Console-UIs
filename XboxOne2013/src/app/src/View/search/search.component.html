@@ -1,0 +1,67 @@
+
+<div class="container">
+    <div class="FloatBox XboxLogo">
+        <img src="../../../../assets/XboxLogo.png"/>
+    </div>    
+    <div class="KeyboardContainer">
+        <div class="InputBox">
+            <input type="text" placeholder="Find the game, movie, TV show, music and app">            
+            <div class="StoreSearchBarPoweredText">
+              <p>Powered by <img src="../../assets/BingLogo.svg" class="SearchStoreBingLogo"></p>                    
+              <p class="StoreSearchBarBingText">bing</p>
+            </div>
+        </div>
+        <div class="Keyboard">
+            <div class="KeyboardHorizontalGrid">
+                <div class="KeyboardLeftContainer">
+                    <button class="Key KeyLarge">
+                        <img src="../../../../assets/XboxButtons/lb.png"><br>
+                        Left<br>
+                        Cursor
+                    </button>
+                    <button class="Key KeySquare">
+                        <img src="../../../../assets/XboxButtons/ls.png"><br>
+                        Caps
+                    </button>
+                </div>
+                <div class="KeyboardMainSessionGrid">
+                    <div class="KeyboardMainSessionFlexContainer">
+                        <button *ngFor="let k of Keys" class="Key KeySmall">
+                            <div>{{ k }}</div>
+                        </button>
+                    </div>
+                    <div class="KeyboardMainSessionBottomContainer">
+                        <button class="Key KeyWide">
+                            <div>
+                                <p class="BottomKeyText">Symbols <img src="../../../../assets/XboxButtons/lt.png" class="BottomKeyImg"></p> 
+                            </div>
+                        </button>
+                        <button class="Key KeyExtraWide">
+                            <div>
+                                <p class="BottomKeyText">Space <img src="../../../../assets/XboxButtons/y.png" class="BottomKeyImg"></p>
+                            </div>
+                        </button>
+                        <button class="Key KeyWide">
+                            <div>
+                                <p class="BottomKeyText">Backspace <img src="../../../../assets/XboxButtons/x.png" class="BottomKeyImg"></p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="KeyboardRightContainer">
+                    <button class="Key KeyLarge">
+                        <img src="../../../../assets/XboxButtons/rb.png"><br>
+                        Right<br>
+                        Cursor
+                    </button>
+                    <button class="Key KeySquare">
+                        <img src="../../../../assets/XboxButtons/menu.png"><br>
+                        Caps
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay"></div>
