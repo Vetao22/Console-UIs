@@ -1,0 +1,100 @@
+
+<div class="Container">
+    <div class="FloatBox XboxLogo">
+        <img src="../../../../assets/XboxLogo.png"/>
+    </div>
+    <div class="Grid">
+        <div style="grid-row: 1; grid-column: 1;">
+            <p class="Title">Settings</p>
+            <br>
+            <p class="Subtitle">{{ UsersService.LoggedUser.Name }}</p>
+        </div>        
+        
+        <div style="grid-row: 2; grid-column: 1;">
+            <div class="LargeButton SelectedButton">
+                <img src="{{ UsersService.LoggedUser.ProfilePicUrl }}">
+                <p>About Me</p>
+            </div>
+            <div class="LargeButton SelectedButton">
+                <img src="../../../../assets/SignInLogo.png">
+                <p>Sign-in, Security & PassKey</p>
+            </div>
+            <div class="LargeButton SelectedButton">
+                <img src="../../../../assets/PrivacyLogo.png">
+                <p>Privacy and Online Safety</p>
+            </div>
+            <div class="LargeButton SelectedButton">
+                <img src="../../../../assets/CardLogo.png">
+                <p>Payment & Billing</p>
+            </div>
+            <div class="LargeButton SelectedButton">
+                <img src="../../../../assets/SubscriptionsLogo.png">
+                <p>Subscriptions</p>
+            </div>
+            <div class="LargeButton SelectedButton">
+                <img src="../../../../assets/HomeLogo.png">
+                <p>My Home Xbox</p>
+            </div>
+        </div>
+
+        <div style="grid-row: 1; grid-column: 2; margin-top: 40px;">
+            <p class="Subtitle">Console</p>
+        </div>    
+
+        <div class="FlexContainer" style="grid-row: 2; grid-column: 2;">
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/NetworkLogo.png">
+                <br>
+                <p class="Subtitle">Network</p>
+            </div>
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/KinnectLogo.png">
+                <br>
+                <p class="Subtitle">Kinect</p>
+            </div>
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/PreferencesLogo.png">
+                <br>
+                <p class="Subtitle">Preferences</p>
+            </div>
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/TvAndOneGuideLogo.png">
+                <br>
+                <p class="Subtitle">TV & OneGuide</p>
+            </div>
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/DiscLogo.png">
+                <br>
+                <p class="Subtitle">Disc & Blu-ray</p>
+            </div>
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/ConsoleLogo.png">
+                <br>
+                <p class="Subtitle">System</p>
+            </div>
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/TvAndSoundLogo.png">
+                <br>
+                <p class="Subtitle">Display & Sound</p>
+            </div>
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/SubtitleLogo.png">
+                <br>
+                <p class="Subtitle">Closed Captioning</p>
+            </div>
+            <div class="FlexItem SelectedButton">
+                <img src="../../../../assets/PowerLogo.png">
+                <br>
+                <p class="Subtitle">Power & Startup</p>
+            </div>
+        </div>
+
+        <div class="SubGrid" style="grid-row: 2; grid-column: 3;">
+            <p class="Subtitle" style="grid-row: 1; grid-column: 1;">Family</p>
+            <p class="Subtitle" style="grid-row: 1; grid-column: 2; margin-left: 38%;">Other People</p>
+
+            <div class="Subtitle SelectedButton" style="grid-row: 2; grid-column: 1;">Add to family</div>
+            <div class="Subtitle SelectedButton" style="grid-row: 2; grid-column: 2;">Remove accounts</div>
+        </div>
+    </div>
+</div>

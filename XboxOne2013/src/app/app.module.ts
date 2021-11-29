@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { StartMainContentComponent } from './src/View/start-main-content/start-main-content.component';
 import { TopComponent } from './src/View/Start/Top/top/top.component';
 import { SearchComponent } from './src/View/search/search.component';
+import { SettingsComponent } from './src/View/settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopComponent,
     StartMainContentComponent,
-    SearchComponent
+    SearchComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
