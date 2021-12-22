@@ -1,4 +1,6 @@
+import { UserService } from "../Services/UserService";
 import { XboxAppService } from "../Services/XboxAppService";
+import { XboxNotification } from "./Notification";
 import { XboxAppTile } from "./XboxAppTIle";
 
 export class User
@@ -14,6 +16,8 @@ export class User
     Followers: Array<User>
     Pins: Array<XboxAppTile>;
 
+    Notifications: Array<XboxNotification>;
+
     constructor()
     {
         this.Name = null;
@@ -26,6 +30,8 @@ export class User
         this.Friends = new Array<User>();
         this.Followers = new Array<User>();
         this.Pins = new Array<XboxAppTile>();
+
+        this.Notifications = new Array<XboxNotification>();
     }
 
     AddPin(xboxApp: XboxAppTile | null)
@@ -71,10 +77,22 @@ export class User
         }
     }
 
+    GetFriendsCount()
+    {
+        return this.Friends.length;
+    }
+
+    GetFollowersCount()
+    {
+        return this.Followers.length;
+    }
+
     GetOnlineFriendsCount(): string
     {
         let onlineFriends = this.Friends.filter(f => f.Online).length;
 
         return onlineFriends.toString();
     }
+
+    
 }

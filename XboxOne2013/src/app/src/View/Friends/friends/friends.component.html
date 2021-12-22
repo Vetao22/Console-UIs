@@ -1,0 +1,69 @@
+<div class="Container">
+    <div class="FloatBox XboxLogo">
+        <img src="../../../../assets/XboxLogo.png"/>
+    </div>
+
+    <div class="Grid">
+        <div class="Div1">
+            <h1>Friends</h1>
+            <h3>{{ UsersService.LoggedUser.Name }}</h3>
+
+            <button class="Button">
+                <p class="ButtonText Selected">My Profile</p>
+            </button>
+            <hr>
+
+            <button class="Button">
+                <p class="ButtonText Selected">
+                Friends
+                <br>
+                {{ UsersService.LoggedUser.GetFriendsCount() }}
+                </p>
+            </button>
+            <hr>
+
+            <button class="Button">
+                <p class="ButtonText Selected">
+                Followers
+                <br>
+                {{ UsersService.LoggedUser.GetFollowersCount() }}
+                </p>
+            </button>
+            <hr>
+
+            <button class="Button">
+                <p class="ButtonText Selected">
+                Messages
+                <br>
+                {{ UsersService.LoggedUser.Messages }} unread
+                </p>
+            </button>
+            <hr>
+
+            <button class="Button">
+                <p class="ButtonText Selected">Achievements</p>
+            </button>
+            <hr>
+
+            <button class="Button">
+               <p class="ButtonText Selected">Game DVR</p>
+            </button>
+            <hr>
+        </div>
+        <div class="Div2">
+            <p>FEED</p>
+
+            <div class="FlexContainer" #flexContainer (wheel)="Scroll($event)">
+                <div *ngFor="let n of UsersService.LoggedUser.Notifications" class="FlexItem">
+                    <img src="{{ n.SourceUser.ProfilePicUrl }}">
+
+                    <div style="width: 100%;">
+                        <p class="FlexItemName">{{ n.SourceUser.Name }}</p>
+                        <p class="FlexItemDate">{{ n.Time | date :'short' }}</p>
+                        <p class="FlexItemMessage">{{ n.Message }}</p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

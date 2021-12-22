@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StartMainContentComponent } from './src/View/start-main-content/start-main-content.component';
+
 import { TopComponent } from './src/View/Start/Top/top/top.component';
 import { SearchComponent } from './src/View/search/search.component';
 import { SettingsComponent } from './src/View/settings/settings.component';
+import { StartMainContentComponent } from './src/View/Start/start-main-content/start-main-content.component';
+import { FriendsComponent } from './src/View/Friends/friends/friends.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { SettingsComponent } from './src/View/settings/settings.component';
     TopComponent,
     StartMainContentComponent,
     SearchComponent,
-    SettingsComponent
+    SettingsComponent,
+    FriendsComponent
   ],
   imports: [
     BrowserModule,

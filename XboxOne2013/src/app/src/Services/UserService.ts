@@ -1,3 +1,4 @@
+import { XboxNotification } from "../Models/Notification";
 import { User } from "../Models/User";
 import { XboxAppService } from "./XboxAppService";
 
@@ -14,6 +15,8 @@ export class UserService
         this.Load();
 
         this.LoggedUser = this.Users[0];
+
+        this.SetNotifications();
     }
 
     AddUser(user: User)
@@ -65,5 +68,59 @@ export class UserService
         user.AddPin(xboxAppService.Search('Dead Rising 3'));
 
         this.AddUser(user);
+
+        user = new User();
+        user.Name = 'José';
+        user.Surname = 'Silva';
+        user.Online = true;
+        user.Gamerscore = '500.000';
+        user.Messages = '5';
+        user.ProfilePicUrl = '../../assets/Users/Profile2.png';
+
+        this.AddUser(user);
+    }
+
+    SetNotifications()
+    {        
+        let user = this.Users[0];
+        let user2 = this.Users[1]
+
+        if(!user)
+        {
+            return;
+        }
+
+        let date = new Date(Date.now());
+            
+        let notification = new XboxNotification(user2, 'started using Upload', date);
+        user.Notifications.push(notification);
+
+        date.setDate(date.getDate() + 3);
+        notification = new XboxNotification(user2, 'started using Skype', date);
+        user.Notifications.push(notification);
+
+        date.setDate(date.getDate() + 1);
+        notification = new XboxNotification(user2, 'started watching TV', date);
+        user.Notifications.push(notification);
+
+        date.setDate(date.getDate() + 2);
+        notification = new XboxNotification(user2, 'started playing Forza', date);
+        user.Notifications.push(notification);
+
+        date.setDate(date.getDate() + 2);
+        notification = new XboxNotification(user2, 'started playing Fifa 14', date);
+        user.Notifications.push(notification);
+
+        date.setDate(date.getDate() + 1);
+        notification = new XboxNotification(user2, 'started using Skydrive', date);
+        user.Notifications.push(notification);
+
+        date.setDate(date.getDate() + 3);
+        notification = new XboxNotification(user2, 'started using Xbox Music', date);
+        user.Notifications.push(notification);
+
+        date.setDate(date.getDate() + 3);
+        notification = new XboxNotification(user2, 'started using Machinima', date);
+        user.Notifications.push(notification);      
     }
 }

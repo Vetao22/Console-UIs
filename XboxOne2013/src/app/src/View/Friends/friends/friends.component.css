@@ -1,0 +1,192 @@
+.Container
+{
+    background-color: gainsboro;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Grid
+{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.Div1
+{
+    grid-column: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #0a3596;
+}
+
+.Div1 > h1
+{
+    margin-top: 40%;
+    margin-left: 20%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    color: white;
+    opacity: .7;
+}
+
+.Div1 > h3
+{
+    margin-top: -8%;
+    margin-left: 20%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 350;
+    color: white;
+    opacity: .7;
+}
+
+.Button
+{
+    background-color: transparent;
+    border: none;
+    margin-top: 1%;
+    margin-left: 25%;
+    height: 45px;
+}
+
+.ButtonText
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-weight: 550;
+    color: white;
+    opacity: .7;
+    text-align: left;
+}
+
+.Div1 > hr
+{
+    width: 55%;
+    color: white;
+    opacity: 0.5;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.Div2
+{
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+    background-color: #a4a4a4;
+    overflow: hidden;
+}
+
+.Div2 > p
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-weight: 550;
+    color: white;
+    margin-left: 6%;
+    margin-top: 15%;
+}
+
+.FlexContainer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 5.5%;
+    width: 90%;
+    height: 70%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.FlexItem
+{
+    border: solid white 2px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    width: 40%;
+    margin: 3px;
+    padding-top: 1%;
+}
+
+.FlexItem:hover 
+{
+    border: solid black 2px;
+}
+
+.FlexItem > img
+{
+    width: 128px;
+    height: 128px;
+}
+
+.FlexItemName
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-weight: 550;
+    color: black;
+    margin: auto;
+    margin-left: 3%;
+}
+
+.FlexItemDate
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-weight: 550;
+    color: black;
+    opacity: .4;
+    margin: auto;
+    margin-left: 3%;
+}
+
+.FlexItemMessage
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-weight: 550;
+    color: black;
+    margin: auto;
+    margin-left: 3%;
+    opacity: .8;
+}
+
+.FloatBox
+{
+    width: 48px;
+    height: 48px;
+    margin: 0px 2px 0 4px;
+    float: left;
+    display: table-cell;
+    margin-top: 2.5%;
+    z-index: 2;
+}
+
+.XboxLogo
+{
+    float: right;
+    margin-right: 5%;
+    z-index: 2;
+}
+
+.XboxLogo > Img
+{
+    width: 150%;
+    height: 150%;
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+
+.Selected:hover
+{
+    opacity: 1;
+    color:#FDFEFF;
+}

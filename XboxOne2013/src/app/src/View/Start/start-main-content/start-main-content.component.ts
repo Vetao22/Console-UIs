@@ -1,8 +1,8 @@
 import { keyframes, style } from '@angular/animations';
 import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/render3/view/util';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { UserService } from '../../Services/UserService';
-import { XboxAppService } from '../../Services/XboxAppService';
+import { UserService } from '../../../Services/UserService'
+import { XboxAppService } from '../../../Services/XboxAppService';
 
 @Component({
   selector: 'app-start-main-content',
@@ -67,7 +67,6 @@ export class StartMainContentComponent implements OnInit
       { left: `${-container.offsetLeft + 75}px`}],
       { duration: 700, iterations: 1}).
         finished.then( () => scrollContainer.style.left = `${-container.offsetLeft + 75}px`);
-    
   }
 }
 5
