@@ -1,0 +1,80 @@
+
+<div class="container">
+    <div class="scrollContainer" #scrollContainer (wheel)="Scroll($event)">
+        <div class="profile">
+            <img src="{{ User.ProfilePicUrl }}" class="ProfileUserPic">
+            <p class="ProfileUserName">{{ User.Name }}</p>
+
+            <img src="../../../../assets/GamerscoreLogo.png" class="ProfileGamerscoreImg">
+            <p class="ProfileGamerscore">{{ User.Gamerscore }}</p>
+
+            <p class="Friends">Friends</p>
+
+            <hr>
+
+            <p class="Friends2">Friends</p>
+            <p class="FriendsCount">{{ User.Friends.length }}</p>
+
+            <p class="Followers">Followers</p>
+            <p class="FollowersCount">{{ User.Friends.length }}</p>
+
+            <img src="../../../../assets/reputation.png" class="ReputationImg">
+
+            <p class="Reputation">Reputation</p>
+            <p class="ReputationStatus">Good</p>
+            
+            <div class="ButtonContainer">
+                <button class="Btn">Appear offline</button>
+                <button class="Btn">Choose color</button>
+                <button class="Btn">Set gamerpic</button>
+                <button class="Btn">Set gamertag</button>
+                <button class="Btn">Customize avatar</button>
+                <button class="Btn">Privacy settings</button>
+            </div>           
+        </div>
+        
+        <div class="activity">
+            <p class="Title">Recent Activity</p>
+            <div class="FlexContainer">
+                <div class="FlexItem">
+                    <div class="FlexImage">
+                        <img src="../../../../assets/UploadStudioLogo.png" class="UploadStudio">
+                    </div>
+                    <p class="AppTitle">Upload Studio</p>
+                    <p class="AppTime">2m ago</p>
+                    <p class="Action">Open App</p>
+                </div>
+                <div class="FlexItem">
+                    <div class="FlexImage" style="background-color: #00aff0;">
+                        <img src="../../../../assets/SkypeLogo.png" class="Skype">
+                    </div>
+                    <p class="AppTitle">Skype</p>
+                    <p class="AppTime">5m ago</p>
+                    <p class="Action">Open App</p>
+                </div>
+                <div class="FlexItem">
+                    <div class="FlexImage" style="background-color: #089707;">
+                        <img src="../../../../assets/TvLogo.png" class="TV">
+                    </div>
+                    <p class="AppTitle">TV</p>
+                    <p class="AppTime">6m ago</p>
+                    <p class="Action">Open App</p>
+                </div>
+            </div>
+        </div>
+        <div class="gameClips">
+            <p class="Title" style="color: white; opacity: 1; margin-top: 30%; margin-left: 15%;">GAME CLIPS</p>
+            <div class="grid">
+                <img src="../../../../assets/ForzaMotorsport5.jpg" class="grid-TopItem GridItem">
+
+                <img src="../../../../assets/KillerInstinct.jpg" class="gridBottomLeftItem GridItem">
+
+                <img src="../../../../assets/RyseSonOfRome.jpg" class="gridBottomRightItem GridItem">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="FloatBox XboxLogo">
+    <img src="../../../../assets/XboxLogo.png"/>
+</div>

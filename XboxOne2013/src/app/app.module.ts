@@ -9,6 +9,7 @@ import { SearchComponent } from './src/View/search/search.component';
 import { SettingsComponent } from './src/View/settings/settings.component';
 import { StartMainContentComponent } from './src/View/Start/start-main-content/start-main-content.component';
 import { FriendsComponent } from './src/View/Friends/friends/friends.component';
+import { ProfileDetailsComponent } from './src/View/profile-details/profile-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FriendsComponent } from './src/View/Friends/friends/friends.component';
     StartMainContentComponent,
     SearchComponent,
     SettingsComponent,
-    FriendsComponent
+    FriendsComponent,
+    ProfileDetailsComponent
   ],
   imports: [
     BrowserModule,
